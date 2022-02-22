@@ -6,22 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        body {
-            background: yellowgreen;
-        }
-    </style>
 </head>
 <body>
-<!--FCP 当有内容被渲染的时候才有-->
-<div id="app">
-    <h1>1</h1>
-</div>
-<script>
-    setTimeout(() => {
-        console.log(1111)
-    }, 1000)
-</script>
-<script type="text/javascript" src="./index.js"></script>
+<div id="main" style="width: 600px;height:400px;"></div>
+<script src="./node_modules/echarts/index.js"></script>
+<script src="./echarts.js"></script>
 </body>
 </html>
