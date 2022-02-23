@@ -4,7 +4,7 @@ module.exports = {
     mode: 'development',
     entry: {
         index: './src/index.js',
-        echarts: "./src/charts.js"
+        echarts: "./src/echarts.js"
     },
     output: {
         filename: '[name].[hash:5].js',
@@ -22,8 +22,8 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                test: /\.(css|sass)$/i,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -37,7 +37,22 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./index.html"
-        })
+            filename: "index.html",
+            template: "./src/views/index.html",
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true
+            }
+        }),
+        new HtmlWebpackPlugin({
+            filename: "echarts.html",
+            template: "./src/views/echarts.html",
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true
+            }
+        }),
     ]
 };

@@ -1,6 +1,9 @@
-var myChart = echarts.init(document.getElementById('main'))
+import * as echarts from 'echarts';
 
-option = {
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+
+const option = {
     tooltip: {
         trigger: 'item'
     },
@@ -33,7 +36,9 @@ option = {
             labelLine: {
                 show: false
             },
-            data: [{value: 1048, name: 'Search Engine'}]
+            data: [
+                { value: 1048, name: 'Search Engine' },
+            ]
         }
     ]
 };
