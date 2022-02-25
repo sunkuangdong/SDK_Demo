@@ -9,14 +9,35 @@
     <style>
         body {
             background: yellowgreen;
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
 <body>
 <!--FCP 当有内容被渲染的时候才有-->
 <div id="app">
-    <input />
-    <button>查看性能</button>
+    1
+    <h1>1</h1>
+    <h1>1</h1>
+    <h1>1</h1>
+    <label>
+        <input/>
+    </label>
+    <button id="btn">查看性能</button>
+    <script>
+        const button = document.getElementById("btn")
+        button.addEventListener('click', event => {
+            window.location.href = window.location.href + 'echarts.html'
+        });
+    </script>
+    <script>
+        const clickButton = document.createElement("button")
+        clickButton.addEventListener('click', event => {
+            console.log("开始监控了")
+        });
+        clickButton.click()
+    </script>
 </div>
 </body>
 </html>

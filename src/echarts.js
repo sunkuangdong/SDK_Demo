@@ -1,7 +1,7 @@
 import * as echarts from 'echarts';
 
-var chartDom = document.getElementById('main');
-var myChart = echarts.init(chartDom);
+const chartDom = document.getElementById('main');
+const myChart = echarts.init(chartDom)
 
 const option = {
     tooltip: {
@@ -37,7 +37,7 @@ const option = {
                 show: false
             },
             data: [
-                { value: 1048, name: 'Search Engine' },
+                window.localStorage.getItem("TTFB"),
             ]
         }
     ]

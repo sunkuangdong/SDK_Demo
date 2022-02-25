@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "echarts": "^5.3.0"
+    "echarts": "^5.3.0",
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "html-webpack-plugin": "^5.5.0",
