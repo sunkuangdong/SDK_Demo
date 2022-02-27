@@ -10,8 +10,8 @@ getFID(plublicFn);
 getLCP(plublicFn);
 getTTFB(plublicFn);
 getFCP(plublicFn);
-console.log(window.performance.timing)
 // DNS 耗时
+console.log(window.performance.timing)
 
 // TCP 耗时
 // FP 与 FCP 指标
